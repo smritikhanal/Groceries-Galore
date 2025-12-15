@@ -19,8 +19,12 @@ root.title("Login Page")
 
 #background
 img = Image.open(r"C:\Users\Smriti Khanal\Pictures\shopping-bag-cart_23-2148879372.png")
+
+
 photo = ImageTk.PhotoImage(img)
+
 w = photo.width()
+
 h = photo.height()
 
 # make the root window the size of the image

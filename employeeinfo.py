@@ -18,14 +18,22 @@ def update_employee_info():
 
     cursor = db.cursor()
     cursor.execute("UPDATE employees SET password=%s WHERE employee_id=%s", (value2, employee_id))
+    
     cursor.execute("UPDATE employees SET phone=%s WHERE employee_id=%s", (value3, employee_id))
+    
     cursor.execute("UPDATE employees SET email=%s WHERE employee_id=%s", (value4, employee_id))  # New line to update email
+    
+    
     db.commit()
 
     messagebox.showinfo("Success", "Employee information updated successfully")
+    
     aeid_entry.delete(0, 'end')
+    
     apassword_entry.delete(0, 'end')
+    
     a_phno_entry.delete(0, 'end')
+    
     a_email_entry.delete(0, 'end')  # New line to clear email entry field
 
 # Create a tkinter window

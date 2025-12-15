@@ -16,7 +16,9 @@ def process():
    
     # Query products table to get the current number of items for the given product ID
     cursor.execute("SELECT quantity FROM products WHERE product_ID=%s", (cpid,))
+   
     row2 = cursor.fetchone()
+   
     product_count = row2[0] if row2 else 0
    
     # Calculate the new count by adding the cart count to the product count
